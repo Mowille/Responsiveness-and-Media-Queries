@@ -1,0 +1,236 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("./img/bg-intro-desktop.png");
+    background-color: hsl(0, 100%, 74%);
+}
+
+.Container {
+    width: 70%;
+    height: 570px;
+    margin: 80px auto 60px;
+    display: flex;
+}
+
+.text {
+    width: 50%;
+}
+
+
+h1 {
+    font-size: 40px;
+    color: white;
+    margin-top: 170px;
+    font-weight: 700;
+}
+
+.text1 p {
+    margin-right: 60px;
+    line-height: 1.5em;
+    color: hsl(0, 71%, 97%);
+    letter-spacing: 0.07em;
+}
+
+.box1,
+.box2 {
+    border-radius: 8px;
+}
+
+.box1 {
+    text-align: center;
+    padding: 4px;
+    color: white;
+    font-size: 0.87em;
+    background-color: hsl(248, 32%, 49%);
+    margin-bottom: 7px;
+    border-bottom: 5px rgba(250, 66, 10, 0.8) solid;
+    letter-spacing: 0.07em;
+}
+
+.trial,
+button {
+    font-weight: 700;
+}
+
+.box2 {
+    width: 100%;
+    background-color: white;
+    height: 500px;
+    box-sizing: border-box;
+    border-bottom: 6px rgba(255, 17, 0, 0.7) solid;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    padding: 32px 0px 0px;
+    margin: 25px auto 0px;
+}
+
+input,
+button {
+    border-radius: 5px;
+}
+
+input {
+    height: 45px;
+    border: 1px grey solid;
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 0.87em;
+    font-weight: 500;
+    color: hsl(249, 10%, 26%);
+    background-image: none;
+    transition: background-image 4s 2s ease-in, border-color .5s .5s linear, border-width .5s 1s;
+}
+
+::placeholder {
+    color: hsl(249, 10%, 26%);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+input:invalid {
+    background-image: url("./img/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+    border-color: hsl(0, 100%, 74%);
+}
+
+input:hover,
+input:active,
+input:focus {
+    border: 1px grey solid;
+}
+
+input:valid {
+    border-color: rgb(9, 165, 56);
+    border-width: 2px;
+}
+
+.errormsg {
+    padding: 8px 0px;
+    margin: 0px;
+    font-size: 0.8em;
+    text-align: right;
+    color: hsl(0, 100%, 74%);
+    visibility: visible;
+}
+
+
+.input1:focus~.errormsg,
+.input1:valid~.errormsg {
+    visibility: hidden;
+}
+
+.input2:focus~.errormsg,
+.input2:valid~.errormsg {
+    visibility: hidden;
+}
+
+.input3:valid~.errormsg {
+    visibility: hidden;
+}
+
+.input4:focus~.errormsg,
+.input4:valid~.errormsg {
+    visibility: hidden;
+}
+
+button {
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    outline: none;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    padding: 18px;
+    border-bottom: 3px rgba(12, 146, 12, 0.3) solid;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(10, 209, 93);
+    color: white;
+}
+
+.tc {
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 0.8em;
+    color: hsl(246, 25%, 77%);
+}
+
+.box2 a:link {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(0, 100%, 74%);
+}
+
+.box2 a:visited {
+    color: hsl(0, 100%, 74%);
+}
+
+.box2 a:hover {
+    color: red;
+}
+
+/* RESPONSIVENESS */
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-image: url("./img/bg-intro-mobile.png");
+    }
+
+    .container {
+        width: 85%;
+        height: fit-content;
+        margin: 90px auto 60px;
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 0px;
+    }
+
+    .text1 {
+        text-align: center;
+    }
+
+    .text1 p {
+        margin-right: 0px;
+    }
+
+    .box1 {
+        padding: 8px 50px;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .box2 {
+        height: 520px;
+    }
+
+    .tc {
+        letter-spacing: 0.07em;
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .box1 {
+        padding: 3px 30px;
+    }
+}
